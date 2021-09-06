@@ -95,7 +95,8 @@ class App extends React.Component {
         <TitleH1>Phonebook</TitleH1>
         <ContactForm onSubmit={this.addContact} />
         <button type="button" onClick={this.toggleModal}>Open Contact List</button>
-        {showModal && <Modal>
+        {showModal &&
+          <Modal onClose={this.toggleModal}>
         <TitleH2>Contacts</TitleH2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
