@@ -4,6 +4,7 @@ import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import { Container, TitleH1, TitleH2 } from './App.styled';
+import Modal from '../Modal/Modal';
 import './App.css';
 
 const { v4: uuidv4 } = require('uuid');
@@ -79,6 +80,7 @@ class App extends React.Component {
 
     return (
       <Container>
+        <Modal/>
         <TitleH1>Phonebook</TitleH1>
         <ContactForm onSubmit={this.addContact} />
         <TitleH2>Contacts</TitleH2>
