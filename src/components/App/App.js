@@ -5,6 +5,7 @@ import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import { Container, TitleH1, TitleH2 } from './App.styled';
 import Modal from '../Modal/Modal';
+import Clock from '../Clock/Clock';
 import './App.css';
 
 const { v4: uuidv4 } = require('uuid');
@@ -105,7 +106,9 @@ class App extends React.Component {
           />
           <button type="button" onClick={this.toggleModal}>Close</button>
           </Modal>}
-        
+        <div>
+        <Clock/>
+        </div>
       </Container>
     );
   }
