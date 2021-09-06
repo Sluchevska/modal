@@ -8,6 +8,7 @@ import Modal from '../Modal/Modal';
 import Clock from '../Clock/Clock';
 import IconButton from '../IconButton/IconButton';
 import { ReactComponent as BookIcon } from '../../Icons/phbook.svg';
+import { Button } from '../ContactForm/ContactForm.styled';
 
 import './App.css';
 
@@ -99,7 +100,7 @@ class App extends React.Component {
           <IconButton onClick={this.toggleModal} aria-label="Contacts"> <BookIcon width="30px" height="30px" ></BookIcon></IconButton> 
         <TitleH1>Phonebook</TitleH1>
         <ContactForm onSubmit={this.addContact} />
-        <button type="button" onClick={this.toggleModal}>Open Contact List</button>
+        <Button type="button" onClick={this.toggleModal}>Open Contact List</Button>
         {showModal &&
           <Modal onClose={this.toggleModal}>
         <TitleH2>Contacts</TitleH2>
@@ -108,7 +109,7 @@ class App extends React.Component {
           contacts={this.getVisibleContacts()}
           onRemove={this.deleteContact}
           />
-          <button type="button" onClick={this.toggleModal}>Close</button>
+          <Button type="button" onClick={this.toggleModal}>Close</Button>
           </Modal>}
       
         <Clock/>

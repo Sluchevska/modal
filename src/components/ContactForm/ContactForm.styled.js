@@ -22,3 +22,7 @@ font-size: 14px;
 font-weight:700;
   
 `
+
+export const Container = styled.div`
+margin-bottom: 20px
+`
