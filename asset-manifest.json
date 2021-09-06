@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/modal/static/css/main.1a6ef4f2.chunk.css",
-    "main.js": "/modal/static/js/main.56536ceb.chunk.js",
-    "main.js.map": "/modal/static/js/main.56536ceb.chunk.js.map",
-    "runtime-main.js": "/modal/static/js/runtime-main.e062f274.js",
-    "runtime-main.js.map": "/modal/static/js/runtime-main.e062f274.js.map",
-    "static/js/2.c3e79320.chunk.js": "/modal/static/js/2.c3e79320.chunk.js",
-    "static/js/2.c3e79320.chunk.js.map": "/modal/static/js/2.c3e79320.chunk.js.map",
-    "index.html": "/modal/index.html",
-    "static/css/main.1a6ef4f2.chunk.css.map": "/modal/static/css/main.1a6ef4f2.chunk.css.map",
-    "static/js/2.c3e79320.chunk.js.LICENSE.txt": "/modal/static/js/2.c3e79320.chunk.js.LICENSE.txt",
-    "static/media/phbook.36dc20a6.svg": "/modal/static/media/phbook.36dc20a6.svg"
+    "main.css": "/modal-window/static/css/main.1a6ef4f2.chunk.css",
+    "main.js": "/modal-window/static/js/main.56536ceb.chunk.js",
+    "main.js.map": "/modal-window/static/js/main.56536ceb.chunk.js.map",
+    "runtime-main.js": "/modal-window/static/js/runtime-main.a6734564.js",
+    "runtime-main.js.map": "/modal-window/static/js/runtime-main.a6734564.js.map",
+    "static/js/2.c3e79320.chunk.js": "/modal-window/static/js/2.c3e79320.chunk.js",
+    "static/js/2.c3e79320.chunk.js.map": "/modal-window/static/js/2.c3e79320.chunk.js.map",
+    "index.html": "/modal-window/index.html",
+    "static/css/main.1a6ef4f2.chunk.css.map": "/modal-window/static/css/main.1a6ef4f2.chunk.css.map",
+    "static/js/2.c3e79320.chunk.js.LICENSE.txt": "/modal-window/static/js/2.c3e79320.chunk.js.LICENSE.txt",
+    "static/media/phbook.36dc20a6.svg": "/modal-window/static/media/phbook.36dc20a6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e062f274.js",
+    "static/js/runtime-main.a6734564.js",
     "static/js/2.c3e79320.chunk.js",
     "static/css/main.1a6ef4f2.chunk.css",
     "static/js/main.56536ceb.chunk.js"
