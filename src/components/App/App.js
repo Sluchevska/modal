@@ -67,6 +67,7 @@ class App extends React.Component {
   };
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
+     
   };
 
   getVisibleContacts = () => {
@@ -86,11 +87,14 @@ class App extends React.Component {
 
    toggleModal = () => {
     this.setState(state => ({
-      showModal:!state.showModal
+      showModal: !state.showModal
     }))
-  }
-
-  
+     this.setState({
+      filter: '',
+      
+    });
+   }
+   
 
   render() {
     const { filter, showModal } = this.state;
