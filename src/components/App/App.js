@@ -6,7 +6,11 @@ import Filter from '../Filter/Filter';
 import { Container, TitleH1, TitleH2 } from './App.styled';
 import Modal from '../Modal/Modal';
 import Clock from '../Clock/Clock';
+import IconButton from '../IconButton/IconButton';
+import { ReactComponent as BookIcon } from '../../Icons/phbook.svg';
+
 import './App.css';
+
 
 const { v4: uuidv4 } = require('uuid');
 
@@ -92,7 +96,7 @@ class App extends React.Component {
 
     return (
       <Container>
-          
+          <IconButton onClick={this.toggleModal} aria-label="Contacts"> <BookIcon width="30px" height="30px" ></BookIcon></IconButton> 
         <TitleH1>Phonebook</TitleH1>
         <ContactForm onSubmit={this.addContact} />
         <button type="button" onClick={this.toggleModal}>Open Contact List</button>
@@ -106,9 +110,10 @@ class App extends React.Component {
           />
           <button type="button" onClick={this.toggleModal}>Close</button>
           </Modal>}
-        <div>
+      
         <Clock/>
-        </div>
+       
+       
       </Container>
     );
   }

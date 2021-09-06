@@ -1,7 +1,7 @@
-
-import React from "react";
-import './Clock.css'
 import { Component } from 'react';
+import React from "react";
+import { ClockContainer } from './Clock.styled';
+
 
 
 export default class Clock extends Component {
@@ -23,6 +23,6 @@ export default class Clock extends Component {
   }
 
   render() {
-    return <div className="Clock__face">{this.state.time}</div>;
+    return <ClockContainer>{this.state.time}</ClockContainer>;
   }
 }
