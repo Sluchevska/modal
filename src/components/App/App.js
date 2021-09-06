@@ -19,7 +19,23 @@ class App extends React.Component {
     ],
 
     filter: '',
+    showModal: false,
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+    localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
+   }
+  }
+
+  componentDidMount() {
+    const parsedContacts = JSON.parse(localStorage.getItem('contacts'));
+    if(parsedContacts){
+    this.setState({contacts:parsedContacts})}
+
+  }
+
+ 
 
   addContact = ({ name, number }) => {
     const doubleName = this.state.contacts.find(
@@ -62,33 +78,33 @@ class App extends React.Component {
     }));
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.contacts !== prevState.contacts) {
-    localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
-   }
+   toggleModal = () => {
+    this.setState(state => ({
+      showModal:!state.showModal
+    }))
   }
 
-  componentDidMount() {
-    const parsedContacts = JSON.parse(localStorage.getItem('contacts'));
-    if(parsedContacts){
-    this.setState({contacts:parsedContacts})}
-
-  }
+  
 
   render() {
-    const { filter } = this.state;
+    const { filter, showModal } = this.state;
 
     return (
       <Container>
-        <Modal/>
+          
         <TitleH1>Phonebook</TitleH1>
         <ContactForm onSubmit={this.addContact} />
+        <button type="button" onClick={this.toggleModal}>Open Contact List</button>
+        {showModal && <Modal>
         <TitleH2>Contacts</TitleH2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={this.getVisibleContacts()}
           onRemove={this.deleteContact}
-        />
+          />
+          <button type="button" onClick={this.toggleModal}>Close</button>
+          </Modal>}
+        
       </Container>
     );
   }
