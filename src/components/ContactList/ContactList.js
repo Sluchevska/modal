@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
 import {
-  Span,
   Button,
+  Span,
   ContactItems,
   ContainerItems,
 } from './ContactList.styled';
